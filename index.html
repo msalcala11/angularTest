@@ -3,11 +3,16 @@
   <title>Demo</title>
   <script type="text/javascript" src="js/lib/angular.min.js"></script>
   <script type="text/javascript" src="js/lib/angular-resource.min.js"></script>
+  <script type="text/javascript" src="js/controllers/app.js"></script>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 </head>
 <body>
-  <h1>Welcome {{name}}!</h1>
-  <input placeholder="type your name..." ng-model="name" />
+  <div class="container" ng-controller="AppCtrl">
+    <h1>AngulAir</h1>
+    
+    <ul ng-repeat="airport in airports">
+      <li>{{airport.code}} - {{airport.city}}</li>
+    </ul>
 </body>
 </html>

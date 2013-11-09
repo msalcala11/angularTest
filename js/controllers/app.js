@@ -28,9 +28,19 @@ function AppCtrl ($scope) {
 	    ]
 	},
     }
+    
+    $scope.sidebarURL = "partials/airport.html";
+    $scope.formURL = "partials/form.html";
+    
     $scope.currentAirport = null;
     $scope.setAirport = function(code){
 	$scope.currentAirport = $scope.airports[code];
+    }
+    $scope.editAirport = function(code){
+	$scope.editing = $scope.airports[code];
+	$scope.hide = function(){
+	    $scope.editing = null;
+	}
     }
 
 }

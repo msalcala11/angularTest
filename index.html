@@ -9,11 +9,16 @@
 </head>
 <body>
   <div class="container" ng-controller="AppCtrl">
-    <h1>AngulAir</h1>
-    
-    <ul ng-repeat="airport in airports">
-      <li><a href="" ng-click="setAirport(airport.code)">{{airport.code}} - {{airport.city}}</a></li>
-    </ul>
-    <p ng-show="currentAirport">Current Airport: {{currentAirport.name}}</p>
+    <div class="row">
+      <div class="col-md-6">
+	<h1>AngulAir</h1>
+	<ul ng-repeat="airport in airports">
+	  <li><a href="" ng-click="setAirport(airport.code)">{{airport.code}} - {{airport.name}}</a> | <a href="" ng-click="editAirport(airport.code)"> Edit</a></li>
+	</ul>
+      </div>
+      <div class="col-md-6" ng-include src="sidebarURL"></div>
+    </div>
+      <div class="col-md-12" ng-include src="formURL"></div>
+    </div>
 </body>
 </html>

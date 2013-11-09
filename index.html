@@ -12,7 +12,8 @@
     <h1>AngulAir</h1>
     
     <ul ng-repeat="airport in airports">
-      <li>{{airport.code}} - {{airport.city}}</li>
+      <li><a href="" ng-click="setAirport(airport.code)">{{airport.code}} - {{airport.city}}</a></li>
     </ul>
+    <p ng-show="currentAirport">Current Airport: {{currentAirport.name}}</p>
 </body>
 </html>

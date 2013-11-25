@@ -12,11 +12,11 @@ function navRouter ($routeProvider){
 	    templateUrl: 'partials/airport.html',
 	    controller: 'AirportCtrl'
 	    })
-	.when('/favorites', {template: '<h3>Flights</h3>',
+	.when('/favorites', {template: '<h3>My Favorites</h3>',
 			   controller: function($scope) {
 			       $scope.setActive('favorites');
 			   }})
-	.when('/messages', {template: '<h3>Your Reservations</h3>',
+	.when('/messages', {template: '<h3>My Messages</h3>',
 				controller: function($scope) {
 				    $scope.setActive('messages');
 				}})

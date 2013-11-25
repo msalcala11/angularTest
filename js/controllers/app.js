@@ -7,9 +7,8 @@ function AppCtrl ($scope) {
 	$scope[menuItem + 'Active'] = 'active';
     }
 
-
-    $scope.coaches = {
-	"000": {
+    $scope.coaches = [
+	{
 	    "code": "000",
 	    "name": "Mike Smith",
 	    "city": "Atlanta",
@@ -19,7 +18,7 @@ function AppCtrl ($scope) {
 		"Leadership"
 	    ]
 	},
-	"001": {
+	{
 	    "code": "001",
 	    "name": "John Doe",
 	    "city": "St. Louis",
@@ -28,7 +27,7 @@ function AppCtrl ($scope) {
 		"Power"
 	    ]
 	},
-	"002": {
+	{
 	    "code": "002",
 	    "name": "Julie Brown",
 	    "city": "Kansas City",
@@ -36,8 +35,8 @@ function AppCtrl ($scope) {
 		"Yoga",
 		"Tai Chi"
 	    ]
-	},
-    }
+	}
+	];//end of coaches object
     
     $scope.sidebarURL = "partials/airport.html";
     $scope.formURL = "partials/form.html";
@@ -52,5 +51,16 @@ function AppCtrl ($scope) {
 	    $scope.editing = null;
 	}
     }
+    $scope.editAirport = function(code){
+	$scope.editing = $scope.airports[code];
+	$scope.hide = function(){
+	    $scope.editing = null;
+	}
+    }
 
+    $scope.phones = [
+	{'name': 'Nexus S', 'snippet': 'Fast just got faster with Nexus S.'},
+	{'name': 'Motorola', 'snippet': 'The Next, Next Generation tablet.'},
+	{'name': 'MOTOROLA XOOM', 'snippet': 'even better'}
+  ];
 }

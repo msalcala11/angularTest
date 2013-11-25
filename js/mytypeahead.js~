@@ -1,0 +1,6 @@
+$(document).ready(function() {
+     $('.typeahead').typeahead({                               
+          name: "cities",                
+          local: ['italy', 'france', 'england', 'united states', 'brazil', 'spain']                                              
+     });
+});

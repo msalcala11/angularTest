@@ -1,13 +1,22 @@
 <h3>Let's Find You a Great One</h3>
+<!--<div class="container">
+    
+<br/><br/>
+
+<input type="text" class="form-control cities typeahead" id="citiesInput" />
+
+<br/><br/>
+
+<p>The values are: "italy", "france", "england", "united states", "brasil" and "spain"</p>
+    
+</div>-->
 <input style="margin-bottom: 20px" type="text" class="form-control" placeholder="What kind of coach are you looking for?" ng-model="se">
-Showing {{se}}
-
-
+<div class="alert alert-info"> <strong style="font-size: medium">{{(coaches | filter:se).length}}</strong> coach<span ng-hide="(coaches | filter:se).length == 1">es</span> match<span ng-show="(coaches | filter:se).length == 1">es</span> your criteria.</div>
 <div class="panel panel-default" ng-repeat="coach in coaches | filter:se">
   <div class="panel-body">
   <a href="">{{coach.name}}</a>
   <div>
-    <span ng-repeat="specialty in coach.specialties"> {{specialty}}, </span>
+    <span ng-repeat="specialty in coach.specialties"> {{specialty}}<span ng-show="! $last">,</span> </span>
   </div>
   </div>
 </div>

@@ -1,23 +1,23 @@
-angular.module('airline', [])
-    .config(airlineRouter);
+angular.module('nav', [])
+    .config(navRouter);
 
-function airlineRouter ($routeProvider){
+function navRouter ($routeProvider){
     $routeProvider
 	.when('/', {
-	    templateUrl: 'partials/destinations.html',
+	    templateUrl: 'partials/coachsearch.html',
 	    controller: function($scope) {
-		$scope.setActive('destinations');
+		$scope.setActive('coachsearch');
 	    }})
 	.when('/airports/:airportCode', {
 	    templateUrl: 'partials/airport.html',
 	    controller: 'AirportCtrl'
 	    })
-	.when('/flights', {template: '<h3>Flights</h3>',
+	.when('/favorites', {template: '<h3>Flights</h3>',
 			   controller: function($scope) {
-			       $scope.setActive('flights');
+			       $scope.setActive('favorites');
 			   }})
-	.when('/reservations', {template: '<h3>Your Reservations</h3>',
+	.when('/messages', {template: '<h3>Your Reservations</h3>',
 				controller: function($scope) {
-				    $scope.setActive('reservations');
+				    $scope.setActive('messages');
 				}})
 }

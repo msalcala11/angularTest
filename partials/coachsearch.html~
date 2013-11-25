@@ -1,0 +1,4 @@
+<h3>Let's Find You a Great One</h3>
+<ul ng-repeat="airport in airports">
+  <li><a href="" ng-click="setAirport(airport.code)">{{airport.code}} - {{airport.name}}</a></li>
+</ul>

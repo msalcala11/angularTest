@@ -52,5 +52,12 @@ function AppCtrl ($scope) {
 	    $scope.editing = null;
 	}
     }
+    $scope.editAirport = function(code){
+	$scope.editing = $scope.airports[code];
+	$scope.hide = function(){
+	    $scope.editing = null;
+	}
+    }
+
 
 }

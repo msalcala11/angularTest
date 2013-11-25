@@ -1,0 +1,13 @@
+<h3>Let's Find You a Great One</h3>
+<input style="margin-bottom: 20px" type="text" class="form-control" placeholder="What kind of coach are you looking for?" ng-model="se">
+Showing {{se}}
+
+
+<div class="panel panel-default" ng-repeat="coach in coaches | filter:se">
+  <div class="panel-body">
+  <a href="">{{coach.name}}</a>
+  <div>
+    <span ng-repeat="specialty in coach.specialties"> {{specialty}}, </span>
+  </div>
+  </div>
+</div>

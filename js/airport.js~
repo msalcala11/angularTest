@@ -1,0 +1,3 @@
+function AirportCtrl ($scope, $routeParams){
+//body..
+}

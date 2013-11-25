@@ -1,3 +1,0 @@
-<div ng-show="editing">
-  <input ng-model="editing.name" class="input-xlarge"/>
-</div>

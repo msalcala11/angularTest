@@ -5,7 +5,7 @@
 
   <ol>
     <li ng-repeat="destination in currentAirport.destinations">
-      {{destination}}
+      <a ng-href="#/airports/{{destination}}">{{destination}}</a>
     </li>
   </ol>
 </div>

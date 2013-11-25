@@ -1,4 +1,13 @@
 function AppCtrl ($scope) {
+    $scope.setActive = function(menuItem) {
+	$scope.destinationsActive = '';
+	$scope.flightsActive = '';
+	$scope.reservationsActive = '';
+
+	$scope[menuItem + 'Active'] = 'active';
+    }
+
+
     $scope.airports = {
 	"PDX": {
 	    "code": "PDX",

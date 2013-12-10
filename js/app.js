@@ -51,11 +51,11 @@ app.controller('sliderDemoCtrl', function($scope, colorpicker) {
 app.filter('distanceFilter', function() {
   return function(coaches, distance) {
     var filtered = [];
-      
+
       angular.forEach(coaches, function(coach) {
 	if(parseInt(coach.distance) <= distance) {
           filtered.push(coach);
-	   
+
 	}
     });
       return filtered;
@@ -70,10 +70,6 @@ function navRouter ($routeProvider){
 	    controller: function($scope) {
 		$scope.setActive('coachsearch');
 	    }})
-	.when('/airports/:airportCode', {
-	    templateUrl: 'partials/airport.html',
-	    controller: 'AirportCtrl'
-	    })
 	.when('/favorites', {template: '<h3>My Favorites</h3>',
 			   controller: function($scope) {
 			       $scope.setActive('favorites');
